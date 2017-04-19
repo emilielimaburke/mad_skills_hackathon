@@ -20,7 +20,7 @@ Install NetBeans IDE 8.2
    
 Facebook Access Token:
 You will need to obtain a Facebook access token from Facebook.  Following the instructions below:
-1) go to http://developer.facebook.com
+1) Go to http://developer.facebook.com
 2) Click on "Tools & Support"
 3) Click on "Graph API Explorer"
 4) Click "Get Token" then "Get User Token"
