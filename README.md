@@ -1,10 +1,9 @@
 # MadSkills
 MadSkills Hackathon
 
-In order to complete the Hackathon project you will need the following 2 components downloaded and installed on your local machine.
+In order to complete the Hackathon project you will need the following 2 components downloaded and installed on your local machine:
+Java 8 + NetBeans IDE 8.2
 
-Java 8
-+ NetBeans IDE 8.2
 
 Environment Setup Instructions:
 
