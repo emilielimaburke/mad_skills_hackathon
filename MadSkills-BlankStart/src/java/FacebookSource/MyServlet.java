@@ -46,7 +46,9 @@ public class MyServlet extends HttpServlet {
         User user = facebookClient.fetchObject("me", User.class);
         
         //This tells facebook we want to publish a message and attach a link to it.
-        
+        FacebookType publishMessageResponse = facebookClient.publish("me/feed",FacebookType.class, Parameter.with("link", "https://hiremadskills.com"), 
+                               Parameter.with("message", request.getParameter("FBStatus")));
+
         
        //This outputs a new html form to the page with our success message written on it.
         try (PrintWriter out = response.getWriter()) {
@@ -59,7 +61,9 @@ public class MyServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<div class=\"pageContainer\">");
-            out.println("<h1>Good Job, Almost ready for Facebook!</h1>");
+            out.println("<h1>Congratulations! You did it!!!!!</h1>");
+            out.println("<h2>A new Facebook status has now been sent to Facebook for: " + user.getName() + "</h2>");
+            out.println("<h2>Your updated status is: " + request.getParameter("FBStatus") + "</h2>");
             out.println("</div>");
             out.println("</body>");
             out.println("</html>");   
