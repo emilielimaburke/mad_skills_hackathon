@@ -37,13 +37,13 @@ public class MyServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         //You will need to get your own access token and copy and paste it below in order for this project to work correctly.
-        
+        String accessToken="EAACEdEose0cBAGZAvPu5mXmUcpHT5jn0ICCeW5AUZAbwP1K9WhsMssMCR4Hu9ccNhK3bUghsdu8E3NBcBkHztAQuW4bryQDWENDzGj8AEooVVPxqGWWCYGZByKfzXWahVhMCdbgKpqdFKGjt5WtdtD125gMarRyzSW1XlkxsXZBCn3iaMwz883ZAUfCAkYBsZD";
             
         //This creates a new object called "facebookClient" this object has actions attached to it that are defined in the imported restfb library.    
-        
+        FacebookClient facebookClient = new DefaultFacebookClient(accessToken);
       
         //This gives us access to your specific facebook account
-       
+        User user = facebookClient.fetchObject("me", User.class);
         
         //This tells facebook we want to publish a message and attach a link to it.
         
@@ -51,11 +51,19 @@ public class MyServlet extends HttpServlet {
        //This outputs a new html form to the page with our success message written on it.
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here.  */
-           
+         out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<link rel=\"stylesheet\" href=\"newcss.css\"    type=\"text/css\">");
+            out.println("<title>Status Update</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<div class=\"pageContainer\">");
+            out.println("<h1>Good Job, Almost ready for Facebook!</h1>");
+            out.println("</div>");
+            out.println("</body>");
+            out.println("</html>");   
         
-           
-            
-            
             
         }  
         
