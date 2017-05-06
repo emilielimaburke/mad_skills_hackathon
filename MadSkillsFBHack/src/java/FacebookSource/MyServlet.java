@@ -37,7 +37,7 @@ public class MyServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         //You will need to get your own access token and copy and paste it below in order for this project to work correctly.
-        String accessToken = "EAACEdEose0cBAL82ogvd7S5S8kg4f2p9rIG7hUEYJgKRrapH8JMBKfwSSnCnLF18v8NsdHSgiVyVnSGgahIatDhkqeqhAzB5SAFFhCOB5CRu1mn1vDhHfquQvn8AK3apN6FqDg2kTu0rr7ocK3wW2LivWw0mWVIyhZAdkSJaeMMWN1ZCXd";
+        String accessToken = "EAACEdEose0cBACFCXnTTL7oLk5aI1zGAiN2nehRQPsmd0cXFuDAG1Al1t31mhGpNHqbYrmpvmAts2q8quX8NpnpfT5ZC9DZAoObWzCJpadK4QZCoOmtcetHdBsFncTPe0IHcEfvZCeuSE9A5eZAsb760fFyKUum4tleuNkLhry7HTNNZB2ZAkrsddUyQPSAAQsZD";
             
         //This creates a new object called "facebookClient" this object has actions attached to it that are defined in the imported restfb library.    
         FacebookClient facebookClient = new DefaultFacebookClient (accessToken);
